@@ -49,5 +49,8 @@ public class ContentInfo {
      */
     private String hash;
 
-
+    /**
+     * 签名
+     */
+    private String sign;
 }

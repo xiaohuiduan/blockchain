@@ -2,9 +2,11 @@ package cc.weno.blockchain.dao.block;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Author: xiaohuiduan
- * @Date: 2019/12/13 下午7:50
+ * @Date: 2019/12/14 下午7:08
  * _ooOoo_
  * o8888888o
  * 88" . "88
@@ -25,21 +27,12 @@ import lombok.Data;
  * `=---='
  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  * 佛祖保佑       永无BUG
- * <p>
- * 保存数据的block区块
  */
+
 @Data
-public class BlockDao {
+public class BlockBody {
     /**
-     * 区块的头
+     * 区块链中间保存结点的内容
      */
-    private BlockHeader blockHeader;
-    /**
-     * 区块的主体部分
-     */
-    private BlockBody blockBody;
-
-    private String blockHash;
-
-
+    private List<ContentInfo> contentInfos;
 }
