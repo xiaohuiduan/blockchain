@@ -21,5 +21,10 @@ fastjson的性能杠杠的
 
 CA中心与节点的关系：
 
-![](./gitImg/signed.jpg)
+![](./gitImg/数字证书流程.jpg)
+
+PBFT流程图
+![](./gitImg/pbft流程.jpg)
+
+
 
