@@ -31,5 +31,7 @@ A->B
 PBFT流程图
 ![](./gitImg/pbft流程.jpg)
 
+认证流程图
+![](./gitImg/认证流程图.jpg)
 
 
