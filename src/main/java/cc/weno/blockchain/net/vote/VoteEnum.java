@@ -26,15 +26,17 @@ package cc.weno.blockchain.net.vote;
  *
  * @author: xiaohuiduan
  * @data: 2019/12/15 下午7:51
- * @description: PBFT投票的Enum  代表PBFT的几个阶段
+ * @description: PBFT投票的Enum  代表PBFT的几个【状态】！！！！
  */
 public enum VoteEnum {
+
     /**
-     * PRE-PREPARE阶段，主节点发送pre-prepare类型信息给其他从结点
+     * PRE-PREPARE状态
      */
-    PRE_PREPARE("结点生成block区块",100),
+    PRE_PREPARE("节点处于接受消息阶段",100),
+
     /**
-     * 从节点同意主节点请求的编号，进入prepared状态
+     * 从节点同意主节点请求的编号，并广播
      */
     PREPARE("结点同意主节点请求的编号，并对外广播自己的状态",200),
     /**

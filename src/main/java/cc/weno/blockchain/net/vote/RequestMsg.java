@@ -1,9 +1,6 @@
 package cc.weno.blockchain.net.vote;
 
-import cc.weno.blockchain.dao.block.BlockBody;
-import lombok.Data;
-
-import java.util.List;
+import java.security.PublicKey;
 
 /**
  * //                            _ooOoo_
@@ -29,25 +26,21 @@ import java.util.List;
  * //                  佛祖镇楼           BUG辟易
  *
  * @author: xiaohuiduan
- * @data: 2019/12/15 下午9:03
- * @description: 投票的信息类
- *
- * 投票的实体类需要：实际上也就是进行的内容
+ * @data: 2019/12/17 下午5:00
+ * @description: 请求的消息
  */
-@Data
-public class VoteInfo {
-    /**
-     * 目前投票的状态
-     */
-    private int code;
+public class RequestMsg {
 
-    private RequestMsg requestMsg;
-    
     /**
-     * 投票的内容
+     * 数字证书
      */
-    private List<BlockBody> list;
+    private String digitalCer;
 
-    private String hash;
+    /**
+     * 签名
+     */
+    private String digitalSign;
+
+
 
 }
