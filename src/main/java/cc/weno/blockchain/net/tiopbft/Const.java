@@ -1,11 +1,4 @@
-package cc.weno.blockchain.net.vote;
-
-import cc.weno.blockchain.dao.block.Block;
-import cc.weno.blockchain.dao.block.BlockBody;
-import cc.weno.blockchain.dao.block.ContentInfo;
-import lombok.Data;
-
-import java.util.List;
+package cc.weno.blockchain.net.tiopbft;
 
 /**
  * //                            _ooOoo_
@@ -31,31 +24,22 @@ import java.util.List;
  * //                  佛祖镇楼           BUG辟易
  *
  * @author: xiaohuiduan
- * @data: 2019/12/15 下午9:03
- * @description: 投票的信息类
- *
- * 投票的实体类需要：实际上也就是进行的内容
+ * @data: 2020/1/14 上午1:22
+ * @description: 构建p2p网络需要的一些常量
  */
-@Data
-public class VoteInfo {
+public class Const {
     /**
-     * 目前投票的状态
+     * 服务器的ip地址
      */
-    private int code;
-    /**
-     * 投票的内容，投票的时候，直接将整个block的内容进行投票。
-     */
-    private List<Block> msg;
-
-    // 为了保证安全，我们需要使用签名和证书，其中这个鸡儿玩意通过ca实现。
-    /**
-     * 签名
-     */
-    private String sign;
+    public static final String SERVER_IP = "";
 
     /**
-     * 数字证书
+     * 服务器端口
      */
-    private String digitalCert;
+    public static final int PORT = 6666;
 
+    /**
+     * 心跳超时时间
+     */
+    public static final int TIME_OUT = 3000;
 }

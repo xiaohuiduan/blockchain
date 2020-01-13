@@ -1,11 +1,8 @@
-package cc.weno.blockchain.net.vote;
+package cc.weno.blockchain.net.tiopbft;
 
-import cc.weno.blockchain.dao.block.Block;
-import cc.weno.blockchain.dao.block.BlockBody;
-import cc.weno.blockchain.dao.block.ContentInfo;
+
 import lombok.Data;
-
-import java.util.List;
+import org.tio.core.intf.Packet;
 
 /**
  * //                            _ooOoo_
@@ -31,31 +28,24 @@ import java.util.List;
  * //                  佛祖镇楼           BUG辟易
  *
  * @author: xiaohuiduan
- * @data: 2019/12/15 下午9:03
- * @description: 投票的信息类
- *
- * 投票的实体类需要：实际上也就是进行的内容
+ * @data: 2020/1/14 上午2:06
+ * @description: 服务器packet
  */
 @Data
-public class VoteInfo {
-    /**
-     * 目前投票的状态
-     */
-    private int code;
-    /**
-     * 投票的内容，投票的时候，直接将整个block的内容进行投票。
-     */
-    private List<Block> msg;
-
-    // 为了保证安全，我们需要使用签名和证书，其中这个鸡儿玩意通过ca实现。
-    /**
-     * 签名
-     */
-    private String sign;
+public class BlockPacket extends Packet {
 
     /**
-     * 数字证书
+     * 传输内容的字节
      */
-    private String digitalCert;
+    private byte[] body;
 
+    /**
+     * 消息头的长度
+     */
+    public static final int HEADER_LENGTH= 4;
+
+    /**
+     * 字符的编码方式
+     */
+    public static final String CHARSET = "utf-8";
 }
