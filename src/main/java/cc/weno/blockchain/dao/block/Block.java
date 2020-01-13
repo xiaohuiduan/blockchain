@@ -1,6 +1,6 @@
-package cc.weno.blockchain.net.vote;
+package cc.weno.blockchain.dao.block;
 
-import java.security.PublicKey;
+import lombok.Data;
 
 /**
  * //                            _ooOoo_
@@ -26,21 +26,27 @@ import java.security.PublicKey;
  * //                  佛祖镇楼           BUG辟易
  *
  * @author: xiaohuiduan
- * @data: 2019/12/17 下午5:00
- * @description: 请求的消息
+ * @data: 2020/1/14 上午12:56
+ * @description: 块区
  */
-public class RequestMsg {
+@Data
+public class Block {
 
     /**
-     * 数字证书
+     * 块区的头,保存块区的基本信息
+     * version，prehash，merkleTreeHash,timeStamp,区块的序号，公钥
      */
-    private String digitalCer;
+    private BlockHeader blockHeader;
 
     /**
-     * 签名
+     * 块区的body
      */
-    private String digitalSign;
+    private BlockBody blockBody;
 
-
+    /**
+     * 块区的hash
+     * TODO： 块区的hash是否就是merkleTree的hash，this is a question
+     */
+//    private String blockHash;
 
 }

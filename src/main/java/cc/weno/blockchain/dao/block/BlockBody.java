@@ -35,4 +35,5 @@ public class BlockBody {
      * 区块链中间保存结点的内容
      */
     private List<ContentInfo> contentInfos;
+
 }

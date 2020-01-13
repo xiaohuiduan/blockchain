@@ -32,25 +32,31 @@ import java.security.PublicKey;
  */
 @Data
 public class ContentInfo {
-    /**
-     * 公钥
-     */
-    private PublicKey publicKey;
-    /**
-     * 交易的时间戳
-     */
-    private long timeStamp;
-    /**
-     * 交易的内容
-     */
-    private String jsonContent;
-    /**
-     * 交易的hash
-     */
-    private String hash;
 
     /**
-     * 签名
+     * 交易的信息，但是这个交易的信息是最基本的信息
      */
-    private String sign;
+    private String msg;
+
+//    下面是标准的信息,but I don't need it
+//    /**
+//     * 公钥
+//     */
+//    private PublicKey publicKey;
+//    /**
+//     * 交易的时间戳
+//     */
+//    private long timeStamp;
+//    /**
+//     * 交易的内容
+//     */
+//    private String jsonContent;
+//    /**
+//     * 交易的hash
+//     */
+//    private String hash;
+//    /**
+//     * 签名
+//     */
+//    private String sign;
 }
